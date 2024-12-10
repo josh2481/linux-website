@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+body {
+    background-color: rgb(48, 48, 48);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(78, 78, 78);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-img {
+	width: 64px;
+	height: 64px;
+}
+
+.logo-txt {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.main {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.headline {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(-100vw);
+    animation: slideIn 1s ease-out forwards;
+    position: relative;
+    z-index: 50;
+    margin-top: 100px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.informations {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 10vh;
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #333;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+  }
+  
+  .text {
+    margin: 0;
+    color: white;
+  }
+  
+  .img {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .box:hover {
+    opacity: 1;
+  }
+  
+  .box:not(:hover) {
+    opacity: 0.3;
+  }
+  
